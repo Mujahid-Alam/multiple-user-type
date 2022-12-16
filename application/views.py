@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 def index(request):
-    return render(request,'gradesApp/index.html')
+    return render(request,'gradesApp/index.html', {})
 
 @login_required
 def userLogout(request):
@@ -93,10 +93,11 @@ def dashboard(request):
     
 
 def studentDash(request):
-    return render(request,'gradesApp/studentDash.html')
+    return render(request,'dash/studentDash.html')
 
 def teacherDash(request):
-    return render(request,'gradesApp/teacherDash.html')
+    return render(request,'dash/teacherDash.html')
 
 def employeeDash(request):
-    return render(request,'gradesApp/employeeDash.html')
+    return render(request,'dash/employeeDash.html')
+
